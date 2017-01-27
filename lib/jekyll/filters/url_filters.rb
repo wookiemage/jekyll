@@ -13,9 +13,8 @@ module Jekyll
         if Addressable::URI.parse(input).absolute?
           Jekyll.logger.warn(
             "absolute_url:",
-              %("#{input}" is already absolute. Not modifying)
+              %("#{input}" appears to already be absolute)
           )
-          return input
         end
         site = @context.registers[:site]
         return relative_url(input).to_s if site.config["url"].nil?
