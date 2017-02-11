@@ -38,7 +38,7 @@ module Jekyll
             !deprecated_relative_permalinks(site),
             !conflicting_urls(site),
             !urls_only_differ_by_case(site),
-            proper_site_url?(site)
+            proper_site_url?(site),
           ].all?
         end
 
